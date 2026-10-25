@@ -42,7 +42,11 @@ Tailwind CSS IntelliSense
 npm approve-scripts --all
 npm i clsx
 npm i -D tsx arquivo--> executa os arquivos tsx
-npm i date-fns -D
+npm i date-fns
+npm install-scripts approve react-markdown --> npm i react-markdown
+npm install-scripts approve rehype-sanitize --> npm i rehype-sanitize
+npm install-scripts approve remark-gfm --> npm i remark-gfm
+npm install-scripts approve tailwindcss-typography --> npm i tailwindcss-typography -D
 
 no vscode da pasta do projeto
 -----------------------------
