@@ -2,7 +2,7 @@ import { PostModel } from '@/models/post/post-model';
 import { PostRepository } from './post-repository';
 import { resolve } from 'path';
 import { readFile } from 'fs/promises';
-import { Console } from 'console';
+import { SIMULATE_WAIT_IN_MS } from '@/lib/constants';
 
 const ROOT_DIR = process.cwd();
 const JSON_POSTS_FILE_PATH = resolve(
@@ -13,7 +13,6 @@ const JSON_POSTS_FILE_PATH = resolve(
   'posts.json',
 );
 
-const SIMULATE_WAIT_IN_MS = 0;
 export class JsonPostRepository implements PostRepository {
   private async simulateWait() {
     if (SIMULATE_WAIT_IN_MS <= 0) return;
@@ -50,6 +49,15 @@ export class JsonPostRepository implements PostRepository {
   }
 
   async findBySlug(slug: string): Promise<PostModel> {
+    const posts = await this.findAll();
+    const post = posts.find(post => post.slug === slug);
+
+    if (!post) throw new Error('Post não encontrado para slug');
+
+    return post;
+  }
+
+  async findBySlugPublic(slug: string): Promise<PostModel> {
     const posts = await this.findAllPublic();
     const post = posts.find(post => post.slug === slug);
 

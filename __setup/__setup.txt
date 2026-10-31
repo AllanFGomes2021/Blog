@@ -8,6 +8,10 @@ Set-ExecutionPolicy RemoteSigned
 cd E:\Cursos\NEXT_OM
 cd E:\Cursos\NEXT_OM\blog
 
+ELIMINAR O NODE DOS PROCESSOS
+-------------------------------
+taskkill /f  /im "node.exe"
+
 
 criando o projeto
 -----------------
@@ -47,6 +51,15 @@ npm install-scripts approve react-markdown --> npm i react-markdown
 npm install-scripts approve rehype-sanitize --> npm i rehype-sanitize
 npm install-scripts approve remark-gfm --> npm i remark-gfm
 npm install-scripts approve tailwindcss-typography --> npm i tailwindcss-typography -D
+npm install-scripts approve drizzle-orm better-sqlite3 --> npm i drizzle-orm better-sqlite3
+npm install-scripts approve -D @types/better-sqlite3 drizzle-kit --> npm i -D @types/better-sqlite3 drizzle-kit
+
+CARREGANDO BASE DE DADOS
+------------------------
+npx drizzle-kit push --> sem migration e schema foi salvo na base de dados
+npx drizzle-kit generate --> com migration e schema foi salvo na base de dados
+npx drizzle-kit migrate --> executa o que foi gerado pelo generate
+
 
 no vscode da pasta do projeto
 -----------------------------
@@ -70,5 +83,4 @@ git add .
 git commit -m "primeiro commit"
 git remote add origin git@github.com:AllanFGomes2021/blog.git
 git push origin main -u
-
 

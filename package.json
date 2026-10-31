@@ -9,8 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "better-sqlite3": "^13.0.3",
     "clsx": "^2.1.1",
     "date-fns": "^4.4.0",
+    "drizzle-orm": "^0.45.4",
     "next": "16.4.2",
     "react": "19.3.0",
     "react-dom": "19.3.0",
@@ -21,9 +23,12 @@
   },
   "devDependencies": {
     "@tailwindcss/turbopack": "^4",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/better-sqlite3": "^9.6.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "drizzle-kit": "^0.31.11",
     "eslint": "^9",
     "eslint-config-next": "16.4.2",
     "tailwindcss": "^4",
@@ -33,6 +38,11 @@
     "react-markdown@10.1.0": true,
     "rehype-sanitize@6.0.0": true,
     "remark-gfm@4.0.1": true,
-    "tailwindcss-typography@3.1.0": true
+    "tailwindcss-typography@3.1.0": true,
+    "@tailwindcss/typography@0.5.20": true,
+    "drizzle-orm@0.45.4": true,
+    "better-sqlite3@13.0.3": true,
+    "@types/better-sqlite3@9.6.0": true,
+    "drizzle-kit@0.31.11": true
   }
 }

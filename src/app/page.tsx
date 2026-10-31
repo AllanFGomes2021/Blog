@@ -4,6 +4,8 @@ import { PostFeatured } from '@/components/PostFeatured';
 import { PostsList } from '@/components/PostsList';
 import { SpinLoader } from '@/components/SpinLoader';
 
+//export const dynamic = 'force-static';
+
 export default async function HomePage() {
   return (
     <>

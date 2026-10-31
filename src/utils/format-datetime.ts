@@ -19,8 +19,6 @@ export function formatRelativeDate(rawDate: string): string {
 }
 
 export async function dateFormatted(rawDate: string) {
-  'use cache';
-
   const DatePart1 = formatDatetime(rawDate);
   const DatePart2 = formatRelativeDate(rawDate);
 

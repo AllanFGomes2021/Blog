@@ -1,5 +1,7 @@
 @import 'tailwindcss';
 
+/*@import '@tailwindcss/typography';*/
+
 /*
 @layer utilities {
   .meu-container {

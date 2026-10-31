@@ -1,4 +1,4 @@
-import { getYear } from '@/utils/format-datetime';
+//import { getYear } from '@/utils/format-datetime';
 import Link from 'next/link';
 
 export function Footer() {
